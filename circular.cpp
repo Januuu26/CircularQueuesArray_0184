@@ -42,65 +42,14 @@ public:
 
     void remove()
     {
-       
-
-int main()
-{
-    Queues q;
-    char ch;
-
-    while (true)
-    {
-        try
+        // cek apakah antrian kosong
+        if (FRONT == -1)
         {
-            cout << "Menu" << endl;
-            cout << "1. Implement Insert operation" << endl;
-            cout << "2. Implement Delete Operation" << endl;
-            cout << "3. Display values" << endl;
-            cout << "4. Exit" << endl;
-
-            cout << "Enter your choice(1-4): ";
-            cin >> ch;
-            cout << endl;
-
-            switch (ch)
-            {
-            case '1':
-            {
-                q.insert();
-                break;
-            }
-
-            case '2':
-            {
-                q.remove();
-                break;
-            }
-
-            case '3':
-            {
-                q.display();
-                break;
-            }
-
-            case '4':
-            {
-                return 0;
-            }
-
-            default:
-            {
-                cout << "Invalid option!!!" << endl;
-                break;
-            }
-            }
+            cout << "Queue underflow";
+            return;
         }
 
-        catch (exception &ex)
-        {
-            cout << "Check for the values entered" << endl;
-        }
-    }
+        cout << "\nThe element deleted from the queue is=" 
+             << queue_array[FRONT] << "\n";
 
-    return 0;
-}
+      
