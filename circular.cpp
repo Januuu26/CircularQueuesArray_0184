@@ -169,4 +169,10 @@ int main()
             }
         }
 
-       
+        catch (exception &ex)
+        {
+            cout << "Check for the values entered" << endl;
+        }
+    }
+
+   
