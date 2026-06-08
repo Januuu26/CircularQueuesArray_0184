@@ -1,3 +1,37 @@
+/** 
+ * @mainpage Documentation Circular Queues
+ * 
+ * @section Introduction
+ * Project ini merupakan project struktur data
+ * menggunakan struktur data queues dengan pendekatan circular arrays.
+ * 
+ * @section Operations
+ * Project ini memiliki beberapa operasi dasar antara lain:
+ * 1. Insert
+ * 2. Delete
+ * 3. Display
+ * 
+ * @section Cara Penggunaan
+ * Berikut beberapa menu yang bisa digunakan:
+ * 1. en queue
+ * 2. de queue
+ * 3. display
+ * * @section Author
+ * 
+ * @author Profil
+ * - nama:
+ * - nim:
+ * - kelas:
+ * 
+ * @brief
+ * @version 1.0
+ * @date 2026-06-08
+ * 
+ * @copyright jannuarta.abi.ft25@mail.umy.ac.id (c) 2026
+ * 
+ * */
+
+
 #include <iostream>
 using namespace std;
 
@@ -17,9 +51,9 @@ public:
 
     void insert()
     {
-        int num;
+        int nim;
         cout << "Enter a number: ";
-        cin >> num;
+        cin >> nim;
         cout << endl;
 
     // cek apakah antrian kosong
@@ -37,7 +71,7 @@ public:
                 REAR = REAR + 1;
         }
 
-        queue_array[REAR] = num;
+        queue_array[REAR] = nim;
     }
 
     void remove()
@@ -116,11 +150,15 @@ public:
         }
     }
 };
-
+/**
+ * @brief fungsi utama untuk menjalankan program circular queues
+ * 
+ * @return int 
+ */
 int main()
 {
-    Queues q;
-    char ch;
+    Queues q;//< objek untuk menggunakan member yang ada dalam class Queues
+    char ch;//< variabke ch untuk menyimpan pilihan pada menu yang diberikan
 
     while (true)
     {
